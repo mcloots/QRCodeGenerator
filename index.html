@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f5ef" />
+    <meta name="description" content="Maak gratis een QR-code voor je URL. Zonder vervaldatum, zonder account. Download als PNG of SVG." />
+    <title>Vaste QR — Een link. Een code. Blijvend.</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <a class="brand" href="./" aria-label="Vaste QR startpagina"><span class="brand-icon" aria-hidden="true">▦</span> vaste<span class="brand-qr">qr</span><span class="brand-dot">.</span></a>
+        <span class="header-note"><span class="dot"></span> Geen account. Geen vervaldatum.</span>
+      </header>
+      <main>
+        <section class="intro">
+          <p class="eyebrow">KLEINE CODE. GROTE CONNECTIE.</p>
+          <h1>Je link, klaar<br />om te <span>delen.</span><svg class="spark" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 3v16M30 41v16M3 30h16M41 30h16M11 11l11 11M38 38l11 11M11 49l11-11M38 22l11-11" /></svg></h1>
+          <p class="intro-copy">Van website naar QR-code in een paar seconden.<br class="desktop-break" /> Gratis, eenvoudig en zonder vervaldatum.</p>
+        </section>
+        <section class="generator" aria-label="QR-code generator">
+          <div class="editor">
+            <div class="step-label"><span>01</span> JOUW LINK</div>
+            <h2>Waar mag de code naartoe?</h2>
+            <p>Plak de URL van je website, menu of favoriete plek.</p>
+            <form id="qr-form" novalidate>
+              <label for="url">Website-URL</label>
+              <div class="input-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 13 4-4M8 16l-1 1a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0m2 1 1-1a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0" /></svg><input id="url" name="url" type="url" inputmode="url" autocomplete="url" placeholder="https://jouwwebsite.be" aria-describedby="url-hint error" required /></div>
+              <p class="hint" id="url-hint">Geen https:// ingevuld? Dat voegen we voor je toe.</p>
+              <p id="error" class="error" role="alert" hidden></p>
+              <button class="button primary" id="generate" type="submit">Maak mijn QR-code <span aria-hidden="true">↗</span></button>
+            </form>
+            <div class="privacy"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Je link blijft bij jou. Alles gebeurt in je browser.</span></div>
+          </div>
+          <div class="preview-panel">
+            <div class="step-label"><span>02</span> JOUW QR-CODE</div>
+            <div class="preview-box" id="preview-box">
+              <div id="placeholder" class="placeholder"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M12 45V12h33M75 12h33v33M108 75v33H75M45 108H12V75"/><rect x="28" y="28" width="19" height="19"/><rect x="73" y="28" width="19" height="19"/><rect x="28" y="73" width="19" height="19"/><path d="M73 73h10v10h9v9H73zM57 29v18M29 58h18M57 57h13M57 73v19M91 57v8"/></svg><span>Hier verschijnt jouw code</span></div>
+              <img id="qr-image" alt="QR-code voor de ingevoerde website" hidden />
+            </div>
+            <p id="result-url" class="result-url" hidden></p>
+            <div class="downloads"><button id="download-png" class="button download" disabled><span aria-hidden="true">↓</span> Download PNG</button><button id="download-svg" class="button secondary" disabled>SVG <span aria-hidden="true">↓</span></button></div>
+            <p class="download-hint" id="download-hint">PNG voor dagelijks gebruik · SVG voor drukwerk</p>
+            <p id="status" class="sr-only" role="status" aria-live="polite"></p>
+          </div>
+        </section>
+        <section class="benefits" aria-label="Waarom Vaste QR">
+          <article><span class="benefit-icon" aria-hidden="true">∞</span><div><h3>Gemaakt om te blijven</h3><p>Je QR-code heeft geen vervaldatum.<br />Zolang je URL werkt, werkt je code.</p></div></article>
+          <article><span class="benefit-icon" aria-hidden="true">↗</span><div><h3>Rechtstreeks naar je link</h3><p>Geen omwegen of doorstuurdienst.<br />Je URL zit in de code zelf.</p></div></article>
+          <article><span class="benefit-icon" aria-hidden="true">↓</span><div><h3>Download en klaar</h3><p>Op je flyer, visitekaartje of menukaart.<br />Jij kiest waar je hem gebruikt.</p></div></article>
+        </section>
+        <aside class="note"><span aria-hidden="true">ⓘ</span><p><strong>Een vaste code, een vaste link.</strong> De URL in een gedownloade QR-code kun je niet wijzigen. Verandert je link? Maak dan een nieuwe code.</p></aside>
+      </main>
+      <footer><span>Een beetje digitaal. Een heleboel mogelijkheden.</span><span>vasteqr. <span class="footer-dot">●</span> Gratis voor iedereen</span></footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
